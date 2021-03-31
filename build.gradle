@@ -10,6 +10,7 @@ repositories {
     mavenCentral()
     jcenter()
     maven { url "https://oss.jfrog.org/oss-snapshot-local" }
+    mavenLocal()
 }
 
 micronaut {
@@ -22,6 +23,9 @@ micronaut {
 }
 
 dependencies {
+    implementation("io.micronaut.aws:micronaut-aws-xray:2.5.1-SNAPSHOT")
+    implementation("com.amazonaws:aws-xray-recorder-sdk-aws-sdk-v2")
+
     implementation("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-runtime")
     implementation("javax.annotation:javax.annotation-api")
